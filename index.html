@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Chords App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .chord-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .chord-tab {
+            padding: 10px 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .chord-tab.active {
+            background-color: #333;
+            color: #fff;
+        }
+        .chord-list {
+            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .chord-list.active {
+            display: flex;
+        }
+        .chord-item {
+            width: 200px;
+            margin: 10px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        .chord-item pre {
+            font-family: monospace;
+            white-space: pre;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Guitar Chords</h1>
+    <div class="chord-tabs">
+        <div class="chord-tab active" data-type="major" onclick="showChords('major')">Major Chords</div>
+        <div class="chord-tab" data-type="minor" onclick="showChords('minor')">Minor Chords</div>
+    </div>
+    <div class="chord-list active" id="majorChords">
+        <!-- Major chords -->
+        <div class="chord-item" data-chord="C">
+                <pre>
+e|--0--
+B|--1--
+G|--0--
+D|--2--
+A|--3--
+E|--x--
+                </pre>
+            <h3>C Major</h3>
+            <audio src="data:audio/mpeg;base64,//tQxAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAEAAAFAABNVFJIlAAAAJ/I//vQZBQAAACAwAAABagMjY6DJAAAAwAAAEI6gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/7UGQAAACAAAAAhjAU4WOADwABp...">
+            </audio>
+        </div>
+        <div class="chord-item" data-chord="D">
+                <pre>
+e|--x--
+B|--0--
+G|--0--
+D|--2--
+A|--3--
+E|--2--
+                </pre>
+            <h3>D Major</h3>
+            <audio src="data:audio/mpeg;base64,//tQxAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAEAAAFAABNVFJIlAAAAJ/I//vQZBQAAACAwAAABagMjY6DJAAAAwAAAEI6gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/7UGQAAACAAAAAhjAU4WOADwABp...">
+            </audio>
+        </div>
+        <div class="chord-item" data-chord="E">
+                <pre>
+e|--0--
+B|--2--
+G|--2--
+D|--1--
+A|--0--
+E|--x--
+                </pre>
+            <h3>E Major</h3>
+            <audio src="data:audio/mpeg;base64,//tQxAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAEAAAFAABNVFJIlAAAAJ/I//vQZBQAAACAwAAABagMjY6DJAAAAwAAAEI6gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/7UGQAAACAAAAAhjAU4WOADwABp...">
+            </audio>
+        </div>
+        <div class="chord-item" data-chord="F">
+                <pre>
+e|--1--
+B|--1--
+G|--2--
+D|--3--
+A|--3--
+E|--1--
+                </pre>
+            <h3>F Major</h3>
+            <audio src="data:audio/mpeg;base64,//tQxAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAEAAAFAABNVFJIlAAAAJ/I//vQZBQAAACAwAAABagMjY6DJAAAAwAAAEI6gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/7UGQAAACAAAAAhjAU4WOADwABp...">
+            </audio>
+        </div>
+        <div class="chord-item" data-chord="G">
+                <pre>
+e|--3--
+B|--2--
+G|--0--
+D|--0--
+A|--2--
+E|--3--
+                </pre>
+            <h3>G Major</h3>
+            <audio src="data:audio/mpeg;base64,//tQxAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAEAAAFAABNVFJIlAAAAJ/I//vQZBQAAACAwAAABagMjY6DJAAAAwAAAEI6gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/7UGQAAACAAAAAhjAU4WOADwABp...">
+            </audio>
+        </div>
+        <div class="chord-item" data-chord="A">
+                <pre>
+e|--x--
+B|--0--
+G|--2--
+D|--2--
+A|--2--
+E|--0--
+                </pre>
+            <h3>A Major</h3>
+            <audio src="data:audio/mpeg;base64,//tQxAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAEAAAFAABNVFJIlAAAAJ/I//vQZBQAAACAwAAABagMjY6DJAAAAwAAAEI6gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/7UGQAAACAAAAAhjAU4WOADwABp...">
+            </audio>
+        </div>
+        <div class="chord-item" data-chord="B">
+                <pre>
+e|--x--
+B|--2--
+G|--4--
+D|--4--
+A|--2--
+E|--x--
+                </pre>
+            <h3>B Major</h3>
+            <audio src="data:audio/mpeg;base64,//tQxAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAEAAAFAABNVFJIlAAAAJ/I//vQZBQAAACAwAAABagMjY6DJAAAAwAAAEI6gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/7UGQAAACAAAAAhjAU4WOADwABp...">
+            </audio>
+        </div>
+    </div>
+    <div class="chord-list" id="minorChords">
+        <!-- Minor chords -->
+        <div class="chord-item" data-chord="Am">
+                <pre>
+e|--x--
+B|--1--
+G|--2--
+D|--2--
+A|--0--
+E|--x--
+                </pre>
+            <h3>A Minor</h3>
+            <audio src="data:audio/mpeg;base64,//tQxAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAEAAAFAABNVFJIlAAAAJ/I//vQZBQAAACAwAAABagMjY6DJAAAAwAAAEI6gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/7UGQAAACAAAAAhjAU4WOADwABp...">
+            </audio>
+        </div>
+        <div class="chord-item" data-chord="Bm">
+                <pre>
+e|--x--
+B|--2--
+G|--4--
+D|--4--
+A|--2--
+E|--x--
+                </pre>
+            <h3>B Minor</h3>
+            <audio src="data:audio/mpeg;base64,//tQxAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAEAAAFAABNVFJIlAAAAJ/I//vQZBQAAACAwAAABagMjY6DJAAAAwAAAEI6gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/7UGQAAACAAAAAhjAU4WOADwABp...">
+            </audio>
+        </div>
+        <div class="chord-item" data-chord="Cm">
+                <pre>
+e|--3--
+B|--4--
+G|--5--
+D|--5--
+A|--3--
+E|--x--
+                </pre>
+            <h3>C Minor</h3>
+            <audio src="data:audio/mpeg;base64,//tQxAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAEAAAFAABNVFJIlAAAAJ/I//vQZBQAAACAwAAABagMjY6DJAAAAwAAAEI6gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/7UGQAAACAAAAAhjAU4WOADwABp...">
+            </audio>
+        </div>
+        <div class="chord-item" data-chord="Dm">
+                <pre>
+e|--x--
+B|--3--
+G|--2--
+D|--0--
+A|--x--
+E|--x--
+                </pre>
+            <h3>D Minor</h3>
+            <audio src="data:audio/mpeg;base64,//tQxAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAEAAAFAABNVFJIlAAAAJ/I//vQZBQAAACAwAAABagMjY6DJAAAAwAAAEI6gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/7UGQAAACAAAAAhjAU4WOADwABp...">
+            </audio>
+        </div>
+        <div class="chord-item" data-chord="Em">
+                <pre>
+e|--0--
+B|--0--
+G|--0--
+D|--2--
+A|--2--
+E|--0--
+                </pre>
+            <h3>E Minor</h3>
+            <audio src="data:audio/mpeg;base64,//tQxAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAEAAAFAABNVFJIlAAAAJ/I//vQZBQAAACAwAAABagMjY6DJAAAAwAAAEI6gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/7UGQAAACAAAAAhjAU4WOADwABp...">
+            </audio>
+        </div>
+        <div class="chord-item" data-chord="Fm">
+                <pre>
+e|--1--
+B|--1--
+G|--1--
+D|--3--
+A|--3--
+E|--1--
+                </pre>
+            <h3>F Minor</h3>
+            <audio src="data:audio/mpeg;base64,//tQxAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAEAAAFAABNVFJIlAAAAJ/I//vQZBQAAACAwAAABagMjY6DJAAAAwAAAEI6gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/7UGQAAACAAAAAhjAU4WOADwABp...">
+            </audio>
+        </div>
+        <div class="chord-item" data-chord="Gm">
+                <pre>
+e|--3--
+B|--3--
+G|--3--
+D|--5--
+A|--5--
+E|--3--
+                </pre>
+            <h3>G Minor</h3>
+            <audio src="data:audio/mpeg;base64,//tQxAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAEAAAFAABNVFJIlAAAAJ/I//vQZBQAAACAwAAABagMjY6DJAAAAwAAAEI6gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/7UGQAAACAAAAAhjAU4WOADwABp...">
+            </audio>
+        </div>
+    </div>
+</div>
+<script>
+    function showChords(chordType) {
+        const majorChords = document.getElementById('majorChords');
+        const minorChords = document.getElementById('minorChords');
+
+        if (chordType === 'major') {
+            majorChords.classList.add('active');
+            minorChords.classList.remove('active');
+        } else if (chordType === 'minor') {
+            majorChords.classList.remove('active');
+            minorChords.classList.add('active');
+        }
+    }
+</script>
+</body>
+</html>
