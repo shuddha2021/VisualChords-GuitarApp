@@ -14,8 +14,8 @@ VisualChords-GuitarApp is an interactive web application designed to help guitar
 2. **Choose Chord Type**: Click on 'Major Chords' or 'Minor Chords' to view the respective chord diagrams.
 3. **Learn and Practice**: Use the visual diagrams to practice chord shapes on your guitar.
 
-<img width="1512" alt="Screenshot 2024-04-17 at 7 13 38 PM" src="https://github.com/shuddha2021/VisualChords-GuitarApp/assets/81951239/77c8bf07-e684-4572-8f9e-137b4a08cfae">
 <img width="1486" alt="Screenshot 2024-04-22 at 10 40 58 AM" src="https://github.com/shuddha2021/VisualChords-GuitarApp/assets/81951239/974c6ae1-8d95-485a-8fbe-a74e30361530">
+<img width="1486" alt="Screenshot 2024-04-22 at 10 41 20 AM" src="https://github.com/shuddha2021/VisualChords-GuitarApp/assets/81951239/60d1e1d7-865b-4a7f-b194-3d13b94e4369">
 
 ## Technologies Used
 - **HTML**: Structuring the web content and layout.
